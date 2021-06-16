@@ -31,6 +31,7 @@ func main() {
 		sort.Ints(n)
 		// surface area calc
 		total += 2 * (n[0] * n[1] + n[1] * n[2] + n[2] * n[0]) + n[0] * n[1]
+		// ribbon length calc
 		ribbon += 2 * (n[0] + n[1]) + n[0] * n[1] * n[2]
 	}
 	fmt.Println(total)
