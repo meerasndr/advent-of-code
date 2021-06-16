@@ -15,6 +15,7 @@ func main() {
 	//Line-by-line scanner
 	scanner := bufio.NewScanner(file)
 	total := 0
+	ribbon := 0
 	//For each line in the scanner
 	for scanner.Scan(){
 		//Splitting at x and removing x from the input
@@ -30,6 +31,8 @@ func main() {
 		sort.Ints(n)
 		// surface area calc
 		total += 2 * (n[0] * n[1] + n[1] * n[2] + n[2] * n[0]) + n[0] * n[1]
+		ribbon += 2 * (n[0] + n[1]) + n[0] * n[1] * n[2]
 	}
 	fmt.Println(total)
+	fmt.Println(ribbon)
 }
